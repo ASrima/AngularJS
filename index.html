@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='store'>
+<head>
+	<title>Angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+	<script src="main.js"></script>
+</head>
+<body>
+	<div  ng-init="myFavlan=[{
+	name:'JavaScript',
+	Extension:'.js'},
+	{
+	name:'C++',
+	Extension:'.cpp'},
+	{name:'PHP',
+	Extension:'.php'
+}]">
+	<p ng-repeat="language in myFavlan">
+		Name: {{language.name}}<br>
+		Extension: {{language.Extension}}
+		
+	</p>
+	</div>
+	<div ng-init="Hello = [{
+	firstName:'Winnie',
+	lastName:'Tam',
+	age:21
+},
+{
+	firstName:'Mashiyat',
+	lastName:'Chowdhury',
+	age:19
+}]">
+	<p ng-repeat="name in Hello">
+		First Name: {{name.firstName}}
+		<br>
+		Last Name: {{name.lastName}}<br>
+		Age: {{name.age}}
+	</p>
+		
+	</div>
+	
+
+</body>
+</html>
