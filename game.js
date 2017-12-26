@@ -4,7 +4,7 @@ app.controller("simpleController", ['$scope', function($scope){
 	var word=["Metroclick","Remember","Things","Excellent"];
 	$scope.incorrectGuess=[];
 	$scope.correctGuess=[];
-	$scope.guesses=6;
+	$scope.guesses=10;
 	$scope.displayword='';
 	$scope.input={
 		letter:''
