@@ -1,8 +1,11 @@
 .color{
     background-color:grey;
-    color: blue;
+    color: black;
     font-size: 25px;
     text-align: center;
 
 
+}
+.sub{
+    color:red;
 }
