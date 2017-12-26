@@ -10,24 +10,24 @@
 </head>
 <body class="color" ng-controller="simpleController">
 	<div>
-		<p>Welcome to the Guessing Game App</p>
-      <i class="fa fa-cloud" style="font-size:24px;"></i>
-      <i class="glyphicon glyphicon-thumbs-up"></i>
-		<div>Guesses Left:: {{guesses}}</div>
-		<div>
+	        <p>Welcome to the Guessing Game App</p>
+      		<i class="fa fa-cloud" style="font-size:24px;"></i>
+      		<i class="glyphicon glyphicon-thumbs-up"></i>
+	        <div>Guesses Left:: {{guesses}}</div>
+	         <div>
 			Your incorrect Guesses::<span ng-repeat="letter in incorrectGuess"> {{letter}} </span>
-		</div>
-		<div>
+		 </div>
+		 <div>
 			Your Correct Guesses:: <span ng-repeat="letter in correctGuess"> {{letter}}</span>
 		</div>
-	<div>
+		<div>
 		You have to guess: {{displayword}}
-	</div>
-	<div>
+		</div>
+		<div>
 		<input type="text" name="guess" ng-model="input.letter">
 		<button ng-click="letterChosen()">Submit</button>
-	</div>
-</div>
+	        </div>
+     </div>
 
 
 </body>
