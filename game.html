@@ -1,6 +1,6 @@
  <!DOCTYPE html>
-<html ng-app='simple'>
-<head>
+<html ng-app='SimpleApp'>
+<head> <!--Need to make the app work properly-->
 	<title>A Simple Guessing Game App</title>
  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="game.js"></script>
@@ -8,26 +8,27 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body class="color" ng-controller="simpleController">
+<body class="color" ng-controller="GameController">
 	<div>
-	        <p>Welcome to the Guessing Game App</p>
-      		<i class="fa fa-cloud" style="font-size:24px;"></i>
-      		<i class="glyphicon glyphicon-thumbs-up"></i>
-	        <div>Guesses Left:: {{guesses}}</div>
-	         <div>
-			Your incorrect Guesses::<span ng-repeat="letter in incorrectGuess"> {{letter}} </span>
-		 </div>
-		 <div>
-			Your Correct Guesses:: <span ng-repeat="letter in correctGuess"> {{letter}}</span>
+		<p>Welcome to the Guessing Game App</p>
+      <i class="fa fa-cloud" style="font-size:24px;"></i>
+      <i class="glyphicon glyphicon-thumbs-up"></i>
+		<div>Guesses Left:: {{guesses}}</div>
+		<div>
+			Number of incorrect Guesses::<span ng-repeat="letter in incorrectLetterChosen"> {{letter}} </span>
 		</div>
 		<div>
-		You have to guess: {{displayword}}
+			Number of Correct Guesses:: <span ng-repeat="letter in correctLetterChosen"> {{letter}}</span>
+			
 		</div>
-		<div>
+	<div>
+		You have to guess: {{displayedWord}}
+	</div>
+	<div>
 		<input type="text" name="guess" ng-model="input.letter">
-		<button ng-click="letterChosen()">Submit</button>
-	        </div>
-     </div>
+		<button class="sub" ng-click="letterChosen()">Submit</button>
+	</div>
+</div>
 
 
 </body>
